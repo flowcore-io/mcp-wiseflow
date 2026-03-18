@@ -11,9 +11,9 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
     "start": "node dist/index.js",
-    "dev": "tsc --watch",
+    "dev": "tsup --watch",
     "prepublishOnly": "npm run build"
   },
   "publishConfig": {
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
+    "tsup": "^8.5.1",
     "typescript": "^5.1.6"
   }
 }
