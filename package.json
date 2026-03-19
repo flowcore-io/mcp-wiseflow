@@ -1,6 +1,6 @@
 {
   "name": "@flowcore/mcp-wiseflow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server exposing Wiseflow API tools for Claude",
   "main": "dist/index.js",
   "bin": {

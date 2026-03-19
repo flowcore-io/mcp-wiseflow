@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/flowcore-io/mcp-wiseflow/compare/v1.0.0...v1.0.1) (2026-03-19)
+
+
+### Bug Fixes
+
+* switch to Blacksmith runners, matching flowcore-sdk pipeline ([e3111fd](https://github.com/flowcore-io/mcp-wiseflow/commit/e3111fd78f0c819cf42d46f48becc757bcadfc49))
+* use OIDC for npm publish, matching flowcore-sdk pattern ([f4c31f6](https://github.com/flowcore-io/mcp-wiseflow/commit/f4c31f67b6525440f8d41d160fc8e0466ee90a5e))
+
 ## 1.0.0 (2026-03-18)
 
 
