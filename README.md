@@ -31,26 +31,15 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that ex
 
 ## Installation
 
-### 1. Clone and build
-
-```bash
-git clone https://github.com/flowcore-io/mcp-wiseflow.git
-cd mcp-wiseflow
-npm install
-npm run build
-```
-
-This produces `dist/index.js` — the compiled STDIO server entry point.
-
-### 2. Register with Claude Code
+### 1. Register with Claude Code
 
 From inside your project directory, run:
 
 ```bash
 claude mcp add-json -s project wiseflow '{
   "type": "stdio",
-  "command": "node",
-  "args": ["/absolute/path/to/mcp-wiseflow/dist/index.js"],
+  "command": "npx",
+  "args": ["-y", "@flowcore/mcp-wiseflow"],
   "env": {
     "WISEFLOW_API_KEY": "your-api-key-here",
     "WISEFLOW_BASE_URL": "https://europe-api.wiseflow.net/v1",
@@ -59,13 +48,11 @@ claude mcp add-json -s project wiseflow '{
 }'
 ```
 
-Replace `/absolute/path/to/mcp-wiseflow` with the actual path where you cloned the repo.
-
-This creates a `.mcp.json` file in your project root that Claude Code reads on startup.
+This creates a `.mcp.json` file in your project root that Claude Code reads on startup. No cloning or building required — `npx` handles everything.
 
 > **Tip:** Use `-s user` instead of `-s project` to register the server globally across all projects.
 
-### 3. Restart Claude Code
+### 2. Restart Claude Code
 
 After registration, restart Claude Code. Verify the server is running with:
 
@@ -124,7 +111,7 @@ Show me the submission responses for submission 65253469 in flow 7464798
 ## Development
 
 ```bash
-npm run dev   # watch mode (tsc --watch)
+npm run dev   # watch mode
 npm run build # one-off build
 ```
 
